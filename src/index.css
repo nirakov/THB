@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;700&family=Oswald:wght@700&family=Roboto:wght@400&family=Lato:wght@400&family=Open+Sans:wght@400&display=swap');
+
+:root {
+  --royal-purple: #822BD9;
+  --deep-purple: #7326BF;
+  --lavender: #C9ACF2;
+  --electric-blue: #3212A6;
+  --light-grey: #F2F2F2;
+  --mint-green: #3EEDC5;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}

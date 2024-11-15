@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/heartbox.github.io/static/css/main.8210c6af.css",
+    "main.js": "/heartbox.github.io/static/js/main.5d86c4fb.js",
+    "static/js/453.f69dba25.chunk.js": "/heartbox.github.io/static/js/453.f69dba25.chunk.js",
+    "static/media/deti_vertical_branco.png": "/heartbox.github.io/static/media/deti_vertical_branco.abb65d966d02cc436ac2.png",
+    "static/media/imagemmix.png": "/heartbox.github.io/static/media/imagemmix.44fa9b9d1159828e7c09.png",
+    "static/media/smartwatch.png": "/heartbox.github.io/static/media/smartwatch.f014b4f519d0a4c6dedf.png",
+    "static/media/ecg.png": "/heartbox.github.io/static/media/ecg.8170330f567a3ede6059.png",
+    "static/media/heatbox.png": "/heartbox.github.io/static/media/heatbox.2c34d5b72d0685a4e2dd.png",
+    "static/media/team-member.png": "/heartbox.github.io/static/media/team-member.8d49e377c7c342895ec2.png",
+    "static/media/camera.png": "/heartbox.github.io/static/media/camera.5c9ef5ff35d619645cea.png",
+    "static/media/dashboard.svg": "/heartbox.github.io/static/media/dashboard.9f1df402eb481068c388b7a16f518ce9.svg",
+    "static/media/bicycle.svg": "/heartbox.github.io/static/media/bicycle.dd2c870c1b19d22eea7f6b2408297125.svg",
+    "static/media/heartRate.svg": "/heartbox.github.io/static/media/heartRate.e0f4178763a24e798fee1dd2e7ffbb83.svg",
+    "index.html": "/heartbox.github.io/index.html",
+    "main.8210c6af.css.map": "/heartbox.github.io/static/css/main.8210c6af.css.map",
+    "main.5d86c4fb.js.map": "/heartbox.github.io/static/js/main.5d86c4fb.js.map",
+    "453.f69dba25.chunk.js.map": "/heartbox.github.io/static/js/453.f69dba25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8210c6af.css",
+    "static/js/main.5d86c4fb.js"
+  ]
+}
