@@ -18,6 +18,6 @@ Um website React criado com Create React App e estilizado com Tailwind CSS.
 2. Instale as dependências:
    npm install
 
-##Execução
-##Inicie o servidor de desenvolvimento:
+## Execução
+### Inicie o servidor de desenvolvimento:
 npm start
