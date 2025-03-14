@@ -19,5 +19,5 @@ Um website React criado com Create React App e estilizado com Tailwind CSS.
    npm install
 
 ##Execução
-###Inicie o servidor de desenvolvimento:
+##Inicie o servidor de desenvolvimento:
 npm start
