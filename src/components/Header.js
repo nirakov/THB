@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   const [text, setText] = useState('');
@@ -30,9 +32,12 @@ function Header() {
         <p className="text-lg md:text-xl text-[#F2F2F2] mt-4 max-w-lg">
           O The Heart Box é um sistema modular que monitora a saúde e o desempenho dos ciclistas em tempo real, oferecendo dados essenciais para um treino seguro e eficiente.
         </p>
-        <button className="mt-6 py-3 px-6 bg-[#68B9AD] text-white font-semibold rounded-full shadow-lg transition-transform duration-300 hover:bg-[#7451A6] hover:scale-105">
+        <Link 
+          to="/saiba-mais"
+          className="inline-block mt-6 py-3 px-6 bg-[#68B9AD] text-white font-semibold rounded-full shadow-lg transition-transform duration-300 hover:bg-[#7451A6] hover:scale-105"
+        >
           Saiba Mais
-        </button>
+        </Link>
       </div>
     </header>
   );
