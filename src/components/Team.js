@@ -1,14 +1,19 @@
 import React from 'react';
-import teamMemberImage from '../assets/team-member.png';
+import caroline from '../assets/caroline.png';
+import joao from '../assets/joao.png';
+import julia from '../assets/julia.png';
+import mateus from '../assets/mateus.png';
+import nicole from '../assets/nicole.png';
+import theo from '../assets/theo.png';
 
 function Team() {
   const teamMembers = [
-    'Caroline Ribeiro', 
-    'João Rodrigues', 
-    'Júlia Abrantes', 
-    'Mateus da Fonte', 
-    'Nicole Rakov', 
-    'Theo Paschôa'
+    { name: 'Caroline Ribeiro', img: caroline },
+    { name: 'João Rodrigues', img: joao },
+    { name: 'Júlia Abrantes', img: julia },
+    { name: 'Mateus da Fonte', img: mateus },
+    { name: 'Nicole Rakov', img: nicole },
+    { name: 'Theo Paschôa', img: theo }
   ];
 
   return (
@@ -26,19 +31,19 @@ function Team() {
       </div>
       
       <div className="flex flex-wrap gap-5 mt-8">
-        {teamMembers.map((name, idx) => (
+        {teamMembers.map((member, idx) => (
           <div key={idx} className="w-40 md:w-48 text-center">
             <a 
-              href={`mailto:${name.split(' ')[0].toLowerCase()}@ua.pt`} 
+              href={`mailto:${member.name.split(' ')[0].toLowerCase()}@ua.pt`} 
               className="group transition-transform transform hover:scale-110 hover:rotate-3 duration-300"
             >
               <img 
-                src={teamMemberImage} 
-                alt={`Fotografia de ${name}`} 
+                src={member.img} 
+                alt={`Fotografia de ${member.name}`} 
                 className="w-32 h-32 rounded-full mx-auto shadow-md group-hover:shadow-lg group-hover:shadow-[#7451A6] transition-shadow duration-300" 
               />
             </a>
-            <p className="mt-4 text-xl font-semibold text-[#24284B]">{name}</p>
+            <p className="mt-4 text-xl font-semibold text-[#24284B]">{member.name}</p>
           </div>
         ))}
       </div>
