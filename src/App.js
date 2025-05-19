@@ -9,7 +9,8 @@ import Features from './components/Features';
 import About from './components/About';
 import Team from './components/Team';
 import Footer from './components/Footer';
-import SaibaMais from './components/SaibaMais'; // ⬅️ Novo componente de página
+import SaibaMais from './components/SaibaMais';
+import FeatureDetail from './components/FeatureDetail'; // ⬅️ novo
 
 function App() {
   return (
@@ -37,6 +38,18 @@ function App() {
             <div className="bg-light-grey min-h-screen font-sans">
               <Navbar />
               <SaibaMais />
+              <Footer />
+            </div>
+          } 
+        />
+
+        {/* Página de detalhe de recurso */}
+        <Route 
+          path="/feature/:id" 
+          element={
+            <div className="bg-light-grey min-h-screen font-sans">
+              <Navbar />
+              <FeatureDetail />
               <Footer />
             </div>
           } 
