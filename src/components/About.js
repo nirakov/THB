@@ -1,5 +1,6 @@
 import React from 'react';
 import imagemMix from '../assets/imagemmix.png';
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
@@ -19,7 +20,21 @@ function About() {
         <p className="text-lg text-[#68B9AD] leading-relaxed">
           Unindo tecnologia e desporto, promove uma experiência de ciclismo mais saudável e eficiente, conectando o usuário com dados essenciais para uma prática mais segura e otimizada.
         </p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link to="/implementacao">
+            <button className="py-3 px-6 bg-[#68B9AD] text-white font-semibold rounded-full shadow-lg transition-transform duration-300 hover:bg-[#7451A6] hover:scale-105">
+              Implementação
+            </button>
+          </Link>
+
+          <Link to="/tecnologias">
+            <button className="py-3 px-6 bg-[#7451A6] text-white font-semibold rounded-full shadow-lg transition-transform duration-300 hover:bg-[#68B9AD] hover:scale-105">
+              Tecnologias
+            </button>
+          </Link>
+        </div>
       </div>
+
 
       <div className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
         <img 
@@ -28,6 +43,7 @@ function About() {
           className="max-w-sm"
         />
       </div>
+
     </section>
   );
 }
