@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Implementacao from './components/Implementacao';
+import Tecnologias from './components/Tecnologias';
 
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -54,6 +56,29 @@ function App() {
             </div>
           } 
         />
+
+        <Route 
+          path="/implementacao" 
+          element={
+            <div className="bg-light-grey min-h-screen font-sans">
+              <Navbar />
+              <Implementacao />
+              <Footer />
+            </div>
+          }
+        />
+
+        <Route 
+          path="/tecnologias" 
+          element={
+            <div className="bg-light-grey min-h-screen font-sans">
+              <Navbar />
+              <Tecnologias />
+              <Footer />
+            </div>
+          }
+        />
+
       </Routes>
     </Router>
   );
