@@ -35,13 +35,16 @@ function Team() {
           <div key={idx} className="w-40 md:w-48 text-center">
             <a 
               href={`mailto:${member.name.split(' ')[0].toLowerCase()}@ua.pt`} 
-              className="group transition-transform transform hover:scale-110 hover:rotate-3 duration-300"
+              className="group relative transition-transform transform hover:scale-110 hover:rotate-3 duration-300"
             >
               <img 
                 src={member.img} 
                 alt={`Fotografia de ${member.name}`} 
                 className="w-32 h-32 rounded-full mx-auto shadow-md group-hover:shadow-lg group-hover:shadow-[#7451A6] transition-shadow duration-300" 
               />
+              <span className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Entrar em contacto
+              </span>
             </a>
             <p className="mt-4 text-xl font-semibold text-[#24284B]">{member.name}</p>
           </div>
