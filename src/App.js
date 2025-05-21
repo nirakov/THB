@@ -79,8 +79,16 @@ function App() {
             </div>
           }
         />
-        <Route path="/hardware" element={<Hardware />} />
-
+        <Route 
+          path="/hardware" 
+          element={
+            <div className="bg-light-grey min-h-screen font-sans">
+              <Navbar />
+              <Hardware />
+              <Footer />
+            </div>
+          }
+        />
       </Routes>
     </Router>
   );

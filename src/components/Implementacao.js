@@ -52,7 +52,7 @@ function Implementacao() {
       <div className="md:w-1/2 w-full mt-4 md:mt-8 flex flex-col items-end">
         <Link
           to="/hardware"
-          className="mb-2 bg-[#7451A6] text-white px-4 py-2 rounded-md shadow hover:bg-[#5a3e8c] transition text-sm font-semibold"
+          className="py-3 px-6 bg-[#7451A6] text-white font-semibold rounded-full shadow-lg transition-transform duration-300 hover:bg-[#68B9AD] hover:scale-105 mb-4" // Adicionada margem inferior
         >
           Hardware
         </Link>
