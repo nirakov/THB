@@ -6,12 +6,21 @@ import cameraIcon from '../assets/camera.png';
 import bicycleIcon from '../assets/bicycle.svg';
 import dashboardIcon from '../assets/dashboard.svg';
 import heartRateIcon from '../assets/heartRate.svg';
+import cellphoneIcon from '../assets/iphone.png'; // adicione esta linha
 
 function Features() {
   const [hoveredFeature, setHoveredFeature] = useState(null);
   const navigate = useNavigate();
 
   const features = [
+    // Box explicativa da aplicação
+    {
+      id: 'app',
+      icon: cellphoneIcon,
+      label: 'Aplicação',
+      description:
+        'A aplicação integra sensores fisiológicos, smartwatches e câmaras térmicas para monitorar em tempo real a saúde e o desempenho físico.',
+    },
     {
       id: 'sensor',
       icon: ecgIcon,
@@ -27,8 +36,8 @@ function Features() {
     {
       id: 'camera',
       icon: cameraIcon,
-      label: 'Câmara',
-      description: 'Câmara térmica MLX90640 conectada via Wi-Fi que detecta a temperatura facial durante o treino.'
+      label: 'Câmera',
+      description: 'Câmera térmica MLX90640 conectada via Wi-Fi que detecta a temperatura facial durante o treino.'
     },
     {
       id: 'users',
@@ -58,7 +67,7 @@ function Features() {
           <div
             key={idx}
             className="w-28 h-28 bg-white bg-opacity-90 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 hover:bg-[#EAE4F2] cursor-pointer relative"
-            onClick={() => navigate(`/feature/${item.id}`)}
+            onClick={() => !item.isAbout && navigate(`/feature/${item.id}`)}
             onMouseEnter={() => setHoveredFeature(idx)}
             onMouseLeave={() => setHoveredFeature(null)}
           >
