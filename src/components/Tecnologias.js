@@ -1,22 +1,132 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Tecnologias() {
+// Importe os ícones das tecnologias (ajuste os caminhos conforme seu projeto)
+import reactIcon from '../assets/js.png';
+import nodeRedIcon from '../assets/node.png'; 
+import esp32Icon from '../assets/esp32.png';
+import influxdbIcon from '../assets/influxdb.png';
+import grafanaIcon from '../assets/grafana.png';
+import bleIcon from '../assets/bluetooth.png';
+import kotlinIcon from '../assets/kotlin.png';
+import mosquittoIcon from '../assets/mosquitto.png';
+import dockerIcon from '../assets/docker.png';
+import azureIcon from '../assets/azure.png';
+
+function Technologies() {
+  const [hoveredTech, setHoveredTech] = useState(null);
+
+  const technologies = [
+    {
+      id: 'javascript',
+      icon: reactIcon,
+      label: 'JavaScript',
+      description: 'Linguagem de programação usada na construção da interface do sistema, com suporte a componentes interativos e responsivos.'
+    },
+    {
+      id: 'node-red',
+      icon: nodeRedIcon,
+      label: 'Node-RED',
+      description: 'Plataforma de desenvolvimento baseada em fluxo para integração de hardware, APIs e serviços online. No projeto, é usada para processar, transformar e encaminhar dados fisiológicos recebidos dos sensores para o banco de dados e dashboards.'
+    },
+    {
+      id: 'esp32',
+      icon: esp32Icon,
+      label: 'ESP32',
+      description: 'Microcontrolador utilizado para leitura dos sensores fisiológicos e comunicação BLE/Wi-Fi.'
+    },
+    {
+      id: 'influxdb',
+      icon: influxdbIcon,
+      label: 'InfluxDB',
+      description: 'Banco de dados de séries temporais para armazenamento eficiente dos dados fisiológicos.'
+    },
+    {
+      id: 'grafana',
+      icon: grafanaIcon,
+      label: 'Grafana',
+      description: 'Ferramenta de visualização de dados utilizada para dashboards em tempo real.'
+    },
+    {
+      id: 'ble',
+      icon: bleIcon,
+      label: 'Bluetooth Low Energy',
+      description: 'Tecnologia de comunicação sem fio de baixo consumo para transmissão dos dados dos sensores.'
+    },
+    {
+      id: 'kotlin',
+      icon: kotlinIcon,
+      label: 'Kotlin',
+      description: 'Linguagem utilizada no desenvolvimento do aplicativo Android, com Jetpack Compose para interfaces modernas e reativas.'
+    },
+    {
+      id: 'mosquitto',
+      icon: mosquittoIcon,
+      label: 'Mosquitto (MQTT)',
+      description: 'Broker MQTT utilizado para envio eficiente e em tempo real dos dados fisiológicos do app para o backend na nuvem.'
+    },
+    {
+      id: 'docker',
+      icon: dockerIcon,
+      label: 'Docker',
+      description: 'Plataforma de containers utilizada para facilitar o deploy, escalabilidade e gerenciamento dos serviços do backend.'
+    },
+    {
+      id: 'azure',
+      icon: azureIcon,
+      label: 'Cloud Azure',
+      description: 'Infraestrutura em nuvem utilizada para hospedar a solução, garantindo disponibilidade, segurança e escalabilidade.'
+    }
+  ];
+
   return (
-    <div className="p-8 max-w-4xl mx-auto text-left">
-      <h1 className="text-4xl font-bold text-[#24284B] mb-6">Tecnologias Utilizadas</h1>
-
-      <div className="space-y-4 text-lg text-gray-800">
-        <p><strong>BLE (Bluetooth Low Energy):</strong> Usado para comunicação direta e de baixa energia entre o sensor PPG (ESP32) e o aplicativo Android.</p>
-        <p><strong>Wi-Fi:</strong> Utilizado pelo ESP32-CAM com câmera térmica para enviar imagens via WebSocket para o aplicativo móvel.</p>
-        <p><strong>Kotlin + Jetpack Compose:</strong> Linguagem e framework utilizados no desenvolvimento do aplicativo Android, com foco em interfaces reativas e modernas.</p>
-        <p><strong>MQTT (Mosquitto):</strong> Protocolo leve para envio de dados fisiológicos em tempo real do app para o backend na nuvem.</p>
-        <p><strong>Node-RED:</strong> Ferramenta de lógica visual usada para processar, validar e encaminhar os dados recebidos via MQTT.</p>
-        <p><strong>InfluxDB:</strong> Banco de dados de séries temporais, ideal para armazenar medições fisiológicas contínuas (como BPM e temperatura).</p>
-        <p><strong>Grafana:</strong> Ferramenta usada para visualizar os dados em tempo real e gerar dashboards automáticos para cada utilizador ou grupo.</p>
-        <p><strong>Azure (VM na Cloud):</strong> A infraestrutura backend (MQTT, Node-RED, InfluxDB, Grafana) foi hospedada na nuvem usando uma máquina virtual Linux na plataforma Microsoft Azure.</p>
+    <section
+      id="technologies"
+      className="pt-32 pb-32 px-4 text-center flex flex-col items-center"
+      style={{ background: 'linear-gradient(to bottom, #EAE4F2, #F2F2F2)' }}
+    >
+      <h2 className="text-4xl font-bold text-[#24284B] mb-12">Tecnologias</h2>
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl w-full">
+        {technologies.slice(0, 5).map((item, idx) => (
+          <div
+            key={item.id}
+            className="w-44 h-44 bg-white bg-opacity-90 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 hover:bg-[#EAE4F2] cursor-pointer relative mx-auto"
+            onMouseEnter={() => setHoveredTech(idx)}
+            onMouseLeave={() => setHoveredTech(null)}
+          >
+            {hoveredTech === idx && (
+              <div className="absolute z-50 bottom-44 left-1/2 transform -translate-x-1/2 w-64 p-4 bg-white rounded-lg shadow-xl text-sm text-gray-700">
+                <img src={item.icon} alt="" className="w-12 h-12 mx-auto mb-2" />
+                <p className="font-bold text-[#24284B] mb-1">{item.label}</p>
+                <p>{item.description}</p>
+              </div>
+            )}
+            <img src={item.icon} alt={item.label} className="w-16 mb-2" />
+            <p className="text-base font-semibold text-[#24284B]">{item.label}</p>
+          </div>
+        ))}
       </div>
-    </div>
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl w-full mt-8">
+        {technologies.slice(5, 10).map((item, idx) => (
+          <div
+            key={item.id}
+            className="w-44 h-44 bg-white bg-opacity-90 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 hover:bg-[#EAE4F2] cursor-pointer relative mx-auto"
+            onMouseEnter={() => setHoveredTech(idx + 5)}
+            onMouseLeave={() => setHoveredTech(null)}
+          >
+            {hoveredTech === idx + 5 && (
+              <div className="absolute z-50 bottom-44 left-1/2 transform -translate-x-1/2 w-64 p-4 bg-white rounded-lg shadow-xl text-sm text-gray-700">
+                <img src={item.icon} alt="" className="w-12 h-12 mx-auto mb-2" />
+                <p className="font-bold text-[#24284B] mb-1">{item.label}</p>
+                <p>{item.description}</p>
+              </div>
+            )}
+            <img src={item.icon} alt={item.label} className="w-16 mb-2" />
+            <p className="text-base font-semibold text-[#24284B]">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
-export default Tecnologias;
+export default Technologies;
