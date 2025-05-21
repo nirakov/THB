@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Importe os ícones das tecnologias (ajuste os caminhos conforme seu projeto)
-import reactIcon from '../assets/react.png';
+import reactIcon from '../assets/js.png';
 import nodeRedIcon from '../assets/node.png'; 
 import esp32Icon from '../assets/esp32.png';
 import influxdbIcon from '../assets/influxdb.png';
@@ -17,10 +17,10 @@ function Technologies() {
 
   const technologies = [
     {
-      id: 'react',
+      id: 'javascript',
       icon: reactIcon,
-      label: 'React',
-      description: 'Framework JavaScript para construção de interfaces de usuário dinâmicas e reativas.'
+      label: 'JavaScript',
+      description: 'Linguagem de programação usada na construção da interface do sistema, com suporte a componentes interativos e responsivos.'
     },
     {
       id: 'node-red',

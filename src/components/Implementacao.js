@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import implementacaoImage from '../assets/implementacao.png'; // substitua pelo caminho correto da sua imagem
+import { Link } from 'react-router-dom';
+
 
 const faq = [
   {
@@ -46,14 +48,21 @@ function Implementacao() {
           ))}
         </div>
       </div>
-      {/* Imagem */}
-      <div className="md:w-1/2 w-full flex justify-center mt-12 md:mt-24">
+      {/* Imagem com botão acima dela */}
+      <div className="md:w-1/2 w-full mt-4 md:mt-8 flex flex-col items-end">
+        <Link
+          to="/hardware"
+          className="mb-2 bg-[#7451A6] text-white px-4 py-2 rounded-md shadow hover:bg-[#5a3e8c] transition text-sm font-semibold"
+        >
+          Hardware
+        </Link>
         <img
           src={implementacaoImage}
           alt="Diagrama da implementação"
-          className="max-w-full h-auto rounded-lg shadow-lg"
+          className="w-full h-auto rounded-lg shadow-lg"
         />
       </div>
+
     </div>
   );
 }

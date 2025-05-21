@@ -4,6 +4,7 @@ import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Implementacao from './components/Implementacao';
 import Tecnologias from './components/Tecnologias';
+import Hardware from './components/Hardware';
 
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -78,6 +79,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/hardware" element={<Hardware />} />
 
       </Routes>
     </Router>
