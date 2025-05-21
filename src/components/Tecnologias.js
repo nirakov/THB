@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // Importe os ícones das tecnologias (ajuste os caminhos conforme seu projeto)
 import reactIcon from '../assets/js.png';
 import nodeRedIcon from '../assets/node.png'; 
-import esp32Icon from '../assets/esp32.png';
+import gitIcon from '../assets/github.png';
 import influxdbIcon from '../assets/influxdb.png';
 import grafanaIcon from '../assets/grafana.png';
 import bleIcon from '../assets/bluetooth.png';
@@ -30,9 +30,9 @@ function Technologies() {
     },
     {
       id: 'esp32',
-      icon: esp32Icon,
-      label: 'ESP32',
-      description: 'Microcontrolador utilizado para leitura dos sensores fisiológicos e comunicação BLE/Wi-Fi.'
+      icon: gitIcon,
+      label: 'GitHub',
+      description: 'Plataforma de hospedagem de código-fonte e controle de versão que utiliza o Git. Ele permite a colaboração entre desenvolvedores, o gerenciamento de projetos e a automação de fluxos de trabalho.'
     },
     {
       id: 'influxdb',
